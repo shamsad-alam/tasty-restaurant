@@ -47,7 +47,7 @@ const items = [
         image:
             "https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-04.png",
     },
-     {
+    {
         title: "Burger.",
         desc:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",

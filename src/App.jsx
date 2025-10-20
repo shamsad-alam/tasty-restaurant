@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import CardMenu from './components/CardMenu'
 import ComboSection from './components/ComboSection'
+import Blog from './components/Blog'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <CardMenu />
       </div>
       <ComboSection />
+      <Blog />
 
     </>
   )
