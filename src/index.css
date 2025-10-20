@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+:root {
+  --primary-color: #D92332;
+  --secondary-color: #FFD166;
+  --dark-color: #1A1A1A;
+  --bg-color: #FFF8F0;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --container-width: 1280px;
+  --page-padding: 1.5rem;
+}
