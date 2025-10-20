@@ -88,7 +88,7 @@ export default function CardMenu() {
 function Card({ title, desc, gradient, textColor, image }) {
     return (
         <article className={`
-                group relative overflow-hidden rounded-3xl bg-gradient-to-b ${gradient}
+                group relative overflow-hidden rounded-3xl bg-linear-to-b ${gradient}
                 
                 transition-all duration-300 ease-out
                 hover:shadow-2xl `}>

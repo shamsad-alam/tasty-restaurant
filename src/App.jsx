@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import CardMenu from './components/CardMenu'
+import ComboSection from './components/ComboSection'
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
         <Navbar />
         <CardMenu />
       </div>
+      <ComboSection />
+
     </>
   )
 }
