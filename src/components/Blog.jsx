@@ -72,7 +72,7 @@ function Card({ post }) {
                 <img
                     src={post.img}
                     alt={post.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.09]"
                 />
 
                 {/* Meta pill at bottom over image (always visible) */}
@@ -91,18 +91,18 @@ function Card({ post }) {
                 <div
                     className="
             absolute inset-x-0 bottom-0 z-20 translate-y-full
-            bg-gradient-to-t from-black/80 via-black/60 to-transparent p-5
+            bg-linear-to-t from-black/90 via-black/90 to-transparent p-5
             opacity-0 transition-all duration-300 ease-out
             group-hover:translate-y-0 group-hover:opacity-100
           "
                 >
-                    <p className="line-clamp-3 text-sm text-white/95">{post.excerpt}</p>
+                    <p className="line-clamp-3 text-sm pt-5 text-white/95">{post.excerpt}</p>
                 </div>
             </div>
 
             {/* Title + CTA area */}
             <div className="px-6 py-6">
-                <h3 className="text-xl font-extrabold leading-snug">
+                <h3 className="text-xl font-bold leading-snug">
                     {post.title}
                 </h3>
 
