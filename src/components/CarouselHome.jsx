@@ -89,7 +89,7 @@ function Slide({ data }) {
   return (
     <div className="min-w-full">
       <div
-        className={`relative grid grid-cols-1 items-center gap-6 rounded-[28px] bg-gradient-to-br ${data.gradient} px-8 py-12 md:grid-cols-2 md:px-12 md:py-16`}
+        className={`relative grid grid-cols-1 items-center gap-6 rounded-[28px] bg-linear-to-br ${data.gradient} px-8 py-12 md:grid-cols-2 md:px-12 md:py-16`}
       >
         {/* Left content */}
         <div className="max-w-xl">
