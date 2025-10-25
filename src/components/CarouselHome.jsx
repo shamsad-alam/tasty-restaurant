@@ -74,9 +74,8 @@ export default function CarouselHome() {
           {slides.map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 w-6 rounded-full transition ${
-                idx === i ? "bg-white" : "bg-white/40"
-              }`}
+              className={`h-1.5 w-6 rounded-full transition ${idx === i ? "bg-white" : "bg-white/40"
+                }`}
             />
           ))}
         </div>
