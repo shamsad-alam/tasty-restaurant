@@ -8,6 +8,7 @@ import Testimonial from './components/Testimonial'
 import TableBook from './components/TableBook'
 import DiscountCard from './components/DiscountCard'
 import CarouselHome from './components/CarouselHome'
+import FeatureGrid from './components/FeatureGrid'
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
         <Navbar />
         <CardMenu />
       </div>
-      <CarouselHome />
+      <FeatureGrid />
+      {/* <CarouselHome />
       <ComboSection />
       <DiscountCard />
       <Blog />
       <TableBook />
       <Testimonial />
-      <Footer />
+      <Footer /> */}
 
     </>
   )
