@@ -45,7 +45,7 @@ function ResponsiveCards() {
       <div className='max-w-[1400px] mx-auto bg-amber-50'>
         <div className='w-full px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-zinc-50 my-5'>
           <div className='relative overflow-hidden group hover:shadow-xl bg-amber-200 p-4 rounded-md text-center'>
-            <div className='absolute top-0 left-0 right-0  group-hover:top-4 transition-all duration-200 ease-in-out'>
+            <div className='absolute -top-2 left-0 right-0  group-hover:top-4 transition-all duration-200 ease-in-out'>
               <img className=' w-50 mx-auto' src="https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-01.png" alt="" />
             </div>
             <div className='mt-35'>
@@ -67,18 +67,23 @@ function ResponsiveCards() {
              rounded-md transition-all duration-300' >2</h3>
           </div>
 
-          <div className='relative group bg-green-200 rounded-md p-5 text-center'>
-            <div className='w-full h-full flex flex-col justify-center items-center'>
+          <div className='relative group overflow-hidden bg-green-200 rounded-md p-5 text-center'>
+            <div className='w-full absolute top-0 left-0 group-hover:top-full transition-all duration-200 h-full flex flex-col justify-center items-center'>
               <img className='w-50' src="https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-01.png" alt="" />
               <h3 className='text-2xl font-extrabold'>Burger Kings</h3>
             </div>
-            <div className='absolute bottom-0   group-hover:bottom-full transition-all duration-200 p-5'>
+            <div className='absolute bottom-full   group-hover:bottom-10 transition-all duration-300 p-5'>
               <h3 className='text-2xl font-extrabold'>Burger Kings</h3>
-              <p className='text-md text-zinc-400 mt-2'>Magnam, fuga? Aperiam odit minus quod iste  Magnam, fuga? Aperiam odit minus quod iste reiciendis alias voluptatum tenetur obcaecati nostrum.</p>
+              <p className='text-md text-zinc-600 mt-2'>Magnam, fuga? Aperiam odit minus quod iste  Magnam, fuga? Aperiam odit minus quod iste reiciendis alias voluptatum tenetur obcaecati nostrum.</p>
             </div>
           </div>
 
-          <div className='bg-amber-200 p-4 rounded-md'><h2 className="font-semibold text-gray-700">Card 1</h2></div>
+          <div className='relative group overflow-hidden hover:rotate-360 transition-all duration-500 bg-sky-200 rounded-md p-5 text-center'>
+            <div className='w-full transition-all duration-200 h-full flex flex-col justify-center items-center'>
+              <img className='w-50 group-hover:scale-150  transition-all duration-200' src="https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-01.png" alt="" />
+              <h3 className='text-2xl font-extrabold'>Burger Kings</h3>
+            </div>
+          </div>
 
           <div className='bg-amber-200 p-4 rounded-md'><h2 className="font-semibold text-gray-700">Card 1</h2></div>
           <div className='bg-amber-200 p-4 rounded-md'><h2 className="font-semibold text-gray-700">Card 1</h2></div>
