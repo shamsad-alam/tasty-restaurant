@@ -64,7 +64,7 @@ function ResponsiveCards() {
             </div>
             <h3 className='w-[50px] h-[50px] absolute right-1/2 left-1/2 z-15 bottom-5 opacity-0 group-hover:opacity-100
              group-hover:translate-x-23 text-2xl font-bold bg-amber-500 flex justify-center items-center 
-             rounded-md transition-all duration-300' >2</h3>
+             rounded-md transition-all duration-300' > 2</h3>
           </div>
 
           <div className='relative group overflow-hidden bg-green-200 rounded-md p-5 text-center'>
@@ -78,9 +78,9 @@ function ResponsiveCards() {
             </div>
           </div>
 
-          <div className='relative group overflow-hidden hover:rotate-360 transition-all duration-500 bg-sky-200 rounded-md p-5 text-center'>
+          <div className='relative group overflow-hidden  transition-all duration-500 bg-sky-200 rounded-md p-5 text-center'>
             <div className='w-full transition-all duration-200 h-full flex flex-col justify-center items-center'>
-              <img className='w-50 group-hover:scale-150  transition-all duration-200' src="https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-01.png" alt="" />
+              <img className='w-50 group-hover:scale-130  transition-all duration-200' src="https://themesflat.co/html/restaurant/fastfood/assets/images/common/item-01.png" alt="" />
               <h3 className='text-2xl font-extrabold'>Burger Kings</h3>
             </div>
           </div>
