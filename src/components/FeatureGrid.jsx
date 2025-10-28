@@ -5,14 +5,12 @@ function FeatureGrid() {
     <div>
 
       {/* flex box property explain  */}
-      {/* <main class="flex flex-col gap-6 p-10 bg-gray-100">
+      <main class="flex flex-col gap-6 p-10 bg-gray-100">
         <div class="flex flex-col md:flex-row gap-4">
           <div class="flex-1 bg-green-200 p-4">Top Left</div>
           <div class="flex-1 bg-green-300 p-4">Top Right</div>
           <div class="flex-1 bg-green-400 p-4">Top Right</div>
-
           <div class="flex-1 bg-green-500 p-4">Top Right</div>
-
         </div>
 
         <div class="flex flex-col md:flex-row gap-4">
@@ -28,7 +26,7 @@ function FeatureGrid() {
           <div class="flex-[1_1_30%] bg-red-300 p-4">Grid Item 2</div>
           <div class="flex-[1_1_30%] bg-red-400 p-4">Grid Item 3</div>
         </div>
-      </main> */}
+      </main>
 
 
       <ResponsiveCards />
@@ -54,7 +52,7 @@ function ResponsiveCards() {
             </div>
           </div>
 
-          <div className='relative overflow-hidden group hover:shadow-xl bg-amber-200 p-4 rounded-md text-center'>
+          <div className='relative overflow-hidden group hover:shadow-xl bg-rose-200 p-4 rounded-md text-center'>
             <div className='mb-35'>
               <h2 className="mb-2 text-2xl font-bold text-gray-700">Card 1</h2>
               <p className='text-zinc-400 text-md'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dicta optio temporibus ad iste. Error dolorem excepturi amet neque eveniet.</p>
