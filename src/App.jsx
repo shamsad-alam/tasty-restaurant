@@ -13,18 +13,25 @@ import FeatureGrid from './components/FeatureGrid'
 function App() {
   return (
     <>
-      {/* <div className='max-w-7xl mx-auto px-4'>
-        <Navbar />
-        <CardMenu />
-      </div> */}
-      <FeatureGrid />
-      {/* <CarouselHome />
-      <ComboSection />
+      <div className='max-w-7xl mx-auto px-4'>
+        {/* <Navbar />
+        <CardMenu /> */}
+      </div>
+
+      <CarouselHome />
+      {/* <ComboSection />
       <DiscountCard />
       <Blog />
       <TableBook />
       <Testimonial />
       <Footer /> */}
+
+
+
+
+      {/* Practice some cards effect and hover effects =========*/}
+      {/* <FeatureGrid /> */}
+
 
     </>
   )

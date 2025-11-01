@@ -1,6 +1,94 @@
-// HeroCarousel.jsx
-import { useState } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import React, { useState } from 'react'
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
+
+
+
+function CarouselHome() {
+  const [index, setIndex] = useState(1)
+
+  const handleLeft = () => {
+    if (index > 0) {
+      setIndex(index - 1)
+    }
+
+  }
+  const handleRight = () => {
+    if (index < slides.length - 1) {
+      setIndex(index + 1)
+    }
+
+  }
+
+  const [currentIndex, setCurrentIndex] = useState(1)
+
+  const currentResponsice = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 2)
+    }
+  }
+
+  const handleNext = () => {
+    if (currentIndex < slides.length - currentResponsice) {
+      setCurrentIndex(currentIndex + 2)
+    }
+  }
+
+
+  return (
+    <>
+      <section className='w-full   overflow-hidden'>
+        <div className='max-w-[1400px] px-4 mx-auto relative '>
+          <p onClick={handleLeft} className='absolute left-0  top-1/2 z-99 text-2xl w-[50px] h-[50px] cursor-pointer bg-amber-100 flex items-center justify-center rounded-full '><FaAngleLeft /></p>
+          <div className='flex transition-all duration-300' style={{ transform: `translateX(-${index * 100}%)` }}>
+            {
+              slides.map((item) => (
+                <div key={item.id} className='flex-none w-full p-4'>
+                  <img className='w-full' src={item.image} alt={item.titleB} />
+                  <div className='absolute bottom-1/2 w-full' style={{}}>
+                    <p className='text-[20px] text-white font-semibold'>{item.eyebrow} </p>
+                    <h3 className='text-5xl font-bold text-white mt-3 mb-1'>{item.titleA} </h3>
+                    <h3 className='text-5xl font-bold text-white  mb-8'>{item.titleB} </h3>
+
+                    <button className='bg-yellow-500 py-3 px-10 rounded-full font-bold text-white'>{item.cta} </button>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <p onClick={handleRight} className='absolute right-0 top-1/2 z-99 text-2xl w-[50px] h-[50px] cursor-pointer bg-amber-100 flex items-center justify-center rounded-full '><FaAngleRight /></p>
+        </div>
+
+        {/* small 3 cards carousels */}
+        <div className='max-w-5xl mx-auto my-10 relative overflow-hidden'>
+          <p onClick={handlePrev} className='text-2xl absolute left-0 top-1/2 cursor-pointer z-99 bg-amber-100 p-2 rounded-full' >
+            <FaAngleLeft />
+          </p>
+
+          <div className='flex transition-all duration-400'
+            style={{ transform: `translate(-${(currentIndex * 100) / currentResponsice}%)` }}>
+            {
+              slides.map((img) => (
+                <div key={img.id} className='flex-none w-full md:w-1/2 xl:w-1/3 p-2'>
+                  <img className='h-90 object-cover rounded-4xl' src={img.image} alt="" />
+                </div>
+              ))
+            }
+          </div>
+
+          <p onClick={handleNext} className='text-2xl absolute right-0 top-1/2 cursor-pointer z-99 bg-amber-100 p-2 rounded-full' >
+            <FaAngleRight />
+          </p>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default CarouselHome
+
 
 const slides = [
   {
@@ -33,90 +121,34 @@ const slides = [
     image:
       "https://themesflat.co/html/restaurant/fastfood/assets/images/common/slider_3.jpg",
   },
+  {
+    id: 4,
+    eyebrow: "CRAZY BEEFY BURGERS",
+    titleA: "Quality Ingredients.",
+    titleB: "Quality Burgers.",
+    cta: "VIEW DETAIL",
+    gradient: "from-fuchsia-700 via-rose-600 to-orange-500",
+    image:
+      "https://themesflat.co/html/restaurant/fastfood/assets/images/common/slider_2.jpg",
+  },
+  {
+    id: 5,
+    eyebrow: "SPICY WINGS FEST",
+    titleA: "Crunchy. Juicy.",
+    titleB: "Hot & Fresh.",
+    cta: "ORDER NOW",
+    gradient: "from-red-700 via-orange-600 to-amber-500",
+    image:
+      "https://themesflat.co/html/restaurant/fastfood/assets/images/common/slider_1.jpg",
+  },
+  {
+    id: 6,
+    eyebrow: "CHEESY DELIGHT",
+    titleA: "Melty Layers.",
+    titleB: "Massive Flavor.",
+    cta: "DISCOVER",
+    gradient: "from-purple-700 via-pink-600 to-red-500",
+    image:
+      "https://themesflat.co/html/restaurant/fastfood/assets/images/common/slider_3.jpg",
+  },
 ];
-
-export default function CarouselHome() {
-  const [idx, setIdx] = useState(0);
-  const prev = () => setIdx((i) => (i - 1 + slides.length) % slides.length);
-  const next = () => setIdx((i) => (i + 1) % slides.length);
-
-  return (
-    <section className="relative mx-auto max-w-7xl px-4 py-6">
-      <div className="relative overflow-hidden rounded-[28px]">
-        {/* Track */}
-        <div
-          className="flex transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${idx * 100}%)` }}
-        >
-          {slides.map((s) => (
-            <Slide key={s.id} data={s} />
-          ))}
-        </div>
-
-        {/* Controls */}
-        <button
-          aria-label="Prev slide"
-          onClick={prev}
-          className="absolute left-4 top-1/2 z-10 grid h-14 w-14 -translate-y-1/2 place-items-center rounded-full bg-amber-500 text-white shadow-lg transition hover:bg-amber-600"
-        >
-          <FiChevronLeft className="h-6 w-6" />
-        </button>
-        <button
-          aria-label="Next slide"
-          onClick={next}
-          className="absolute right-4 top-1/2 z-10 grid h-14 w-14 -translate-y-1/2 place-items-center rounded-full bg-amber-500 text-white shadow-lg transition hover:bg-amber-600"
-        >
-          <FiChevronRight className="h-6 w-6" />
-        </button>
-
-        {/* Dots */}
-        <div className="pointer-events-none absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          {slides.map((_, i) => (
-            <span
-              key={i}
-              className={`h-1.5 w-6 rounded-full transition ${idx === i ? "bg-white" : "bg-white/40"
-                }`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Slide({ data }) {
-  return (
-    <div className="min-w-full">
-      <div
-        className={`relative grid grid-cols-1 items-center gap-6 rounded-[28px] bg-linear-to-br ${data.gradient} px-8 py-12 md:grid-cols-2 md:px-12 md:py-16`}
-      >
-        {/* Left content */}
-        <div className="max-w-xl">
-          <p className="text-sm font-semibold tracking-[0.2em] text-white/80">
-            {data.eyebrow}
-          </p>
-          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-white md:text-5xl">
-            {data.titleA}
-          </h2>
-          <h2 className="mt-2 text-4xl font-extrabold leading-tight text-white md:text-5xl">
-            {data.titleB}
-          </h2>
-
-          <button className="mt-8 inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-black transition hover:bg-amber-300">
-            {data.cta}
-          </button>
-        </div>
-
-        {/* Right image with highlight rays mimic */}
-        <div className="relative">
-          <div className="pointer-events-none absolute -left-8 -top-10 h-72 w-72 rounded-full bg-white/10 blur-2xl md:h-96 md:w-96" />
-          <img
-            src={data.image}
-            alt=""
-            className="relative z-10 mx-auto max-h-[360px] w-full rounded-3xl object-contain md:max-h-[420px]"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
