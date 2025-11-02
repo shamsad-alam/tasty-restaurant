@@ -11,13 +11,13 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <div className="grid h-10 w-10 place-items-center rounded-lg bg-red-600 font-bold">B</div>
             <div className="text-lg font-extrabold leading-none">
-              Basilico <span className="text-red-500">Fastfood</span>
+              Testy <span className="text-red-500">Food</span>
             </div>
           </div>
 
           <nav className="w-full overflow-x-auto md:w-auto">
             <ul className="flex min-w-max items-center gap-8 text-sm text-white/90">
-              <li><a href="#" className="hover:text-white">About Basilico</a></li>
+              <li><a href="#" className="hover:text-white">About </a></li>
               <li><a href="#" className="hover:text-white">Order Food</a></li>
               <li><a href="#" className="hover:text-white">Careers</a></li>
               <li><a href="#" className="hover:text-white">Offers</a></li>
@@ -37,8 +37,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-extrabold">INFORMATION</h3>
             <div className="mt-5 space-y-3 text-white/80">
-              <p>62 Big Tree St, Livonia, New York 14487, USA</p>
-              <a href="mailto:themesflat@gmail.com" className="hover:text-white">themesflat@gmail.com</a>
+              <p> Your A23 address for me in india</p>
+              <a href="mailto:themesflat@gmail.com" className="hover:text-white">Your@gmail.com</a>
               <a href="#" className="block hover:text-white">Terms and Conditions</a>
               <a href="#" className="block hover:text-white">Warranty and Services</a>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
       {/* Social strip */}
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex flex-wrap items-center justify-center gap-4 rounded-full bg-[#1a1a1a] px-6 py-4">
+        <div className="flex flex-wrap items-center  justify-center gap-4 rounded-full bg-[#1a1a1a] px-6 py-4">
           <IconBtn><FaFacebookF /></IconBtn>
           <IconBtn><FaTwitter /></IconBtn>
           <IconBtn><FaInstagram /></IconBtn>
