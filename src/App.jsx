@@ -14,16 +14,16 @@ function App() {
   return (
     <>
       <div className='max-w-7xl mx-auto px-4'>
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
 
-      <CarouselHome />
-      <CardMenu />
+      {/* <CarouselHome />
+      <CardMenu /> */}
 
-      <ComboSection />
+      {/* <ComboSection />
       <DiscountCard />
       <Blog />
-      <TableBook />
+      <TableBook /> */}
       <Testimonial />
       <Footer />
 

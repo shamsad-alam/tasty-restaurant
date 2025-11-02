@@ -11,7 +11,7 @@ const testimonials = [
     avatars: [
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=128&q=80",
       "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=128&q=80",
-      "https://images.unsplash.com/photo-1544006656-8d08f1a2b4e9?w=128&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=128&q=80",
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
     ],
@@ -24,9 +24,9 @@ const testimonials = [
     avatars: [
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=128&q=80",
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=128&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
       "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=128&q=80",
-      "https://images.unsplash.com/photo-1544006656-8d08f1a2b4e9?w=128&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
     ],
   },
   {
@@ -35,7 +35,7 @@ const testimonials = [
     text:
       "Loved the crispy fries and juicy burgers. Online ordering was smooth and pickup was ready exactly on time. Definitely coming back with friends.",
     avatars: [
-      "https://images.unsplash.com/photo-1544006656-8d08f1a2b4e9?w=128&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=128&q=80",
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&q=80",
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=128&q=80",
