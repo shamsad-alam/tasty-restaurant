@@ -39,7 +39,7 @@ function CarouselHome() {
 
   return (
     <>
-      <section className='w-full   overflow-hidden'>
+      <section className='w-full   overflow-hidden mt-20'>
         <div className='max-w-[1400px] px-4 mx-auto relative '>
           <p onClick={handleLeft} className='absolute left-0  top-1/2 z-99 text-2xl w-[50px] h-[50px] cursor-pointer bg-amber-100 flex items-center justify-center rounded-full '><FaAngleLeft /></p>
           <div className='flex transition-all duration-300' style={{ transform: `translateX(-${index * 100}%)` }}>
@@ -62,7 +62,7 @@ function CarouselHome() {
         </div>
 
         {/* small 3 cards carousels */}
-        <div className='max-w-5xl mx-auto my-10 relative overflow-hidden'>
+        {/* <div className='max-w-5xl mx-auto my-10 relative overflow-hidden'>
           <p onClick={handlePrev} className='text-2xl absolute left-0 top-1/2 cursor-pointer z-99 bg-amber-100 p-2 rounded-full' >
             <FaAngleLeft />
           </p>
@@ -81,7 +81,7 @@ function CarouselHome() {
           <p onClick={handleNext} className='text-2xl absolute right-0 top-1/2 cursor-pointer z-99 bg-amber-100 p-2 rounded-full' >
             <FaAngleRight />
           </p>
-        </div>
+        </div> */}
       </section>
     </>
   )

@@ -60,7 +60,7 @@ const items = [
 
 export default function CardMenu() {
     return (
-        <section className="py-16 md:py-24">
+        <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
             {/* Section header */}
             <div className="mx-auto max-w-3xl px-4 text-center">
                 <p className="text-xs font-semibold tracking-[0.2em] text-amber-600">
