@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="border-y border-white/10 py-6 md:border-none md:py-0">
             <h3 className="text-xl font-extrabold">CONTACT & ORDER</h3>
             <p className="mt-4 text-white/70">Call Us To Order or Order Online</p>
-            <p className="mt-3 text-3xl font-extrabold text-red-500">910-344-7520</p>
+            <p className="mt-3 text-3xl font-extrabold text-red-500">+91 4567893210</p>
             <a
               href="#"
               className="mt-6 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-black transition hover:bg-amber-400"
