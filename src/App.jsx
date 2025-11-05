@@ -9,6 +9,7 @@ import TableBook from './components/TableBook'
 import DiscountCard from './components/DiscountCard'
 import CarouselHome from './components/CarouselHome'
 import FeatureGrid from './components/FeatureGrid'
+import TestimonialPractice from './practice/TestimonialPractice'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
 
       {/* Practice some cards effect and hover effects =========*/}
       {/* <FeatureGrid /> */}
+      <TestimonialPractice />
 
 
     </>

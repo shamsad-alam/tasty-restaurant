@@ -1,6 +1,54 @@
-// TestimonialSection.jsx
-import { useState } from "react";
-import { FaQuoteRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from 'react-icons/fa6';
+import { FaArrowLeft } from "react-icons/fa6";
+import { BsChatRightQuoteFill } from "react-icons/bs";
+import { useState } from 'react';
+
+
+
+function Testimonial() {
+
+  const [index, setIndex] = useState(0)
+
+  const handleLeft = () => {
+    setIndex((item) => (item === 0 ? testimonials.length - 1: item - 1))
+  }
+  const handleRight = () => {
+    setIndex((item)=> (item === testimonials.length -1 ? 0 : item + 1))
+  }
+
+  const {text, name} = testimonials[index]
+  return (
+    <>
+      <section>
+        <div className='mx-auto max-w-7xl px-4'>
+          <div className='flex justify-between items-center py-20'>
+            <div>
+              <p onClick={handleLeft} className='w-15 h-15 rounded-full text-2xl  p-5 bg-yellow-300 cursor-pointer'><FaArrowLeft /></p>
+            </div>
+
+            {/* all Testimonial here */}
+            <div className=' px-10 mx-auto'>
+
+              <div className=''>
+                <h3 className='flex justify-center text-5xl font-bold text-amber-600'><BsChatRightQuoteFill /></h3>
+                <h2 className='text-2xl py-3 mt-10 mb-5'>{text} </h2>
+                <h3 className='text-xl font-semibold text-amber-500'>{name} </h3>
+              </div>
+
+            </div>
+
+            <div>
+              <p onClick={handleLeft} className='w-15 h-15 rounded-full text-2xl  p-5 bg-yellow-300 cursor-pointer'><FaArrowLeft /></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default Testimonial
+
 
 const testimonials = [
   {
@@ -43,82 +91,3 @@ const testimonials = [
     ],
   },
 ];
-
-export default function Testimonial() {
-  const [index, setIndex] = useState(0);
-  const t = testimonials[index];
-
-  const prev = () => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
-  const next = () => setIndex((i) => (i + 1) % testimonials.length);
-  const goTo = (i) => setIndex(i);
-
-  return (
-    <section className="py-16 md:py-20">
-      <div className="mx-auto max-w-5xl px-4">
-        {/* Big quote icon */}
-        <div className="flex justify-center">
-          <FaQuoteRight className="h-12 w-12 text-red-500" aria-hidden="true" />
-        </div>
-
-        {/* Text */}
-        <p className="mx-auto mt-6 max-w-4xl text-center text-lg leading-8 text-neutral-800 md:text-xl">
-          {t.text}
-        </p>
-
-        {/* Name */}
-        <p className="mt-6 text-center text-lg font-extrabold text-neutral-900">
-          – {t.name} –
-        </p>
-
-        {/* Avatars row */}
-        <div className="mt-8 flex items-center justify-center gap-4">
-          {t.avatars.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt=""
-              className={`h-14 w-14 rounded-full border-4 object-cover transition
-                ${i === 0 ? "border-amber-400" : "border-transparent"}`}
-            />
-          ))}
-          {/* More indicator circle */}
-          <div className="grid h-14 w-14 place-items-center rounded-full bg-neutral-900 text-white">
-            <span className="text-xl">···</span>
-          </div>
-        </div>
-
-        {/* Arrows */}
-        <div className="relative mt-10">
-          <button
-            onClick={prev}
-            aria-label="Previous testimonial"
-            className="absolute left-0 top-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-amber-500 text-white transition hover:bg-amber-600"
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            onClick={next}
-            aria-label="Next testimonial"
-            className="absolute right-0 top-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-amber-500 text-white transition hover:bg-amber-600"
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-
-        {/* Dots navigation */}
-        <div className="mt-16 flex justify-center gap-3">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              aria-label={`Go to testimonial ${i + 1}`}
-              className={`h-2.5 w-2.5 rounded-full transition ${
-                index === i ? "bg-neutral-900" : "bg-neutral-300 hover:bg-neutral-400"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
