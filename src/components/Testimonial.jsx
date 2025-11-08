@@ -28,17 +28,15 @@ function Testimonial() {
 
             {/* all Testimonial here */}
             <div className=' px-10 mx-auto'>
-
-              <div className=''>
+              <div className='transition-all duration-300'>
                 <h3 className='flex justify-center text-5xl font-bold text-amber-600'><BsChatRightQuoteFill /></h3>
                 <h2 className='text-2xl py-3 mt-10 mb-5'>{text} </h2>
                 <h3 className='text-xl font-semibold text-amber-500'>{name} </h3>
               </div>
-
             </div>
 
             <div>
-              <p onClick={handleLeft} className='w-15 h-15 rounded-full text-2xl  p-5 bg-yellow-300 cursor-pointer'><FaArrowLeft /></p>
+              <p onClick={handleLeft} className='w-15 h-15 rounded-full text-2xl  p-5 bg-yellow-300 cursor-pointer'><FaArrowRight /></p>
             </div>
           </div>
         </div>
